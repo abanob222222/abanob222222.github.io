@@ -1,83 +1,445 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abanoub Wasafi</title>
-
-
-
-    
-    
-<style>
-body{
-    font-family: Arial, sans-serif;
-    text-align:center;
-    background:#f4f6f9;
-    margin:0;
-}
-
-header{
-    background:#0d6efd;
-    color:white;
-    padding:50px;
-}
-
-section{
-    padding:30px;
-}
-
-.card{
-    background:white;
-    margin:20px auto;
-    max-width:700px;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
-}
-
-footer{
-    background:#222;
-    color:white;
-    padding:15px;
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abanoub Wasafi — Junior Digital Marketer | Social Media, Performance & AI</title>
+  <meta name="description" content="Diploma-trained junior digital marketer with hands-on experience managing social pages for a limousine service and a graphology brand. Specializes in social media, performance ads, SEO & AI-powered marketing. Seeking internships and junior roles." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0A66C2;
+      --accent:#FF6B6B;
+      --support:#00B894;
+      --bg:#F7FAFC;
+      --card:#ffffff;
+      --text:#0B1320;
+      --muted:#6B7280;
+      --maxw:1100px;
+      --radius:10px;
+      --gap:24px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:48px 20px;}
+    header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(6px);background:rgba(255,255,255,0.6);border-bottom:1px solid rgba(11,19,32,0.04);z-index:40}
+    .nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .brand{font-family:Poppins,Inter;font-weight:700;color:var(--text);font-size:18px}
+    nav ul{display:flex;gap:16px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer}
+    .btn-primary{background:var(--primary);color:#fff;border:1px solid var(--primary)}
+    .btn-outline{background:transparent;border:1px solid rgba(11,19,32,0.08);color:var(--text)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:center;padding:48px 0}
+    .hero h1{font-family:Poppins;font-size:34px;margin:0 0 12px}
+    .hero p.lead{margin:0 0 20px;color:var(--muted);font-size:16px}
+    .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-visual{background:linear-gradient(180deg, rgba(10,102,194,0.06), rgba(0,184,148,0.03));padding:20px;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(11,19,32,0.04)}
+    .headshot{width:320px;max-width:100%;border-radius:12px;display:block}
+    section{padding:48px 0;border-top:1px solid rgba(11,19,32,0.03)}
+    h2{font-family:Poppins;margin:0 0 16px;font-size:22px}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:32px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{background:#fff;border-radius:999px;padding:8px 12px;font-weight:600;color:var(--muted);box-shadow:0 2px 6px rgba(11,19,32,0.04)}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .skill-card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(11,19,32,0.03)}
+    .skill-card h4{margin:0 0 8px;font-size:15px}
+    .skill-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+    .experience .exp-card{background:var(--card);padding:16px;border-radius:10px;margin-bottom:14px;box-shadow:0 6px 18px rgba(11,19,32,0.03)}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{background:var(--card);border-radius:10px;padding:14px;box-shadow:0 6px 18px rgba(11,19,32,0.03);display:flex;flex-direction:column;gap:12px}
+    .project img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .kpis{display:flex;gap:10px;flex-wrap:wrap}
+    .kpi{background:rgba(0,184,148,0.08);padding:8px 10px;border-radius:8px;font-weight:700;color:var(--support);font-size:14px}
+    footer{padding:32px 0;text-align:center;color:var(--muted);font-size:14px}
+    /* responsive */
+    @media (max-width:1000px){
+      .projects-grid{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+      .hero{grid-template-columns:1fr 300px}
+    }
+    @media (max-width:700px){
+      .nav{padding:8px 16px}
+      .hero{grid-template-columns:1fr;gap:18px}
+      .hero-visual{order:2}
+      .projects-grid{grid-template-columns:1fr}
+      .container{padding:28px 16px}
+      h1{font-size:26px}
+    }
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(11,19,32,0.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:80}
+    .modal{background:var(--card);max-width:900px;width:100%;border-radius:12px;padding:20px;max-height:90vh;overflow:auto}
+    .close{background:transparent;border:0;font-size:20px;cursor:pointer;color:var(--muted)}
+    /* focus */
+    a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(10,102,194,0.12);outline-offset:2px}
+    /* contact form */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:24px}
+    form .field{display:flex;flex-direction:column;margin-bottom:12px}
+    label{font-weight:600;font-size:13px;margin-bottom:6px}
+    input[type="text"],input[type="email"],textarea{padding:10px;border-radius:8px;border:1px solid rgba(11,19,32,0.08);font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+    .small{font-size:13px;color:var(--muted)}
+    /* resume */
+    .resume{display:inline-block;padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(11,19,32,0.08);font-weight:600}
+  </style>
 </head>
-
 <body>
+  <a class="skip" href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
+  <header aria-hidden="false">
+    <div class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">Abanoub Wasafi</div>
+      <nav>
+        <ul>
+          <li><a href="#main">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn btn-primary" href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<header>
-<h1>أبانوب وصفي</h1>
-<p>طالب إدارة أعمال | مهتم بالاستثمار والجرافولوجي</p>
-</header>
+  <main id="main">
+    <section class="container hero" aria-label="Hero">
+      <div>
+        <h1>Junior Digital Marketer | Social Media Management | Performance Marketing | AI-Powered Marketing</h1>
+        <p class="lead">Diploma-trained marketer who turns content and ads into measurable growth — available for internships and junior roles. Hands-on experience managing social media for a limousine service and a graphology brand.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">View Portfolio</a>
+          <a class="btn btn-outline" href="#contact">Contact Me</a>
+        </div>
+        <p class="small" style="margin-top:12px;color:var(--muted)">Open to internships • Remote or hybrid availability</p>
+      </div>
+      <div class="hero-visual" aria-hidden="false">
+        <img class="headshot" src="https://via.placeholder.com/320x320.png?text=Headshot" alt="Headshot of Abanoub Wasafi">
+      </div>
+    </section>
 
-<section>
+    <section id="about" class="container" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <div class="two-col">
+        <div>
+          <p>I’m <strong>Abanoub Wasafi</strong> — a motivated junior digital marketer with a <strong>Diploma in Digital Marketing</strong> from the Arab Academy for Science, Technology & Maritime Transport. I’m passionate about social media, performance advertising, SEO, AI-assisted content creation, and digital strategy. I test, measure, and iterate to turn creative ideas into measurable growth.</p>
+          <p>I’ve managed social media for a Limousine Services page and a Graphology (handwriting analysis) page — creating content calendars, producing educational and promotional posts, engaging audiences, and improving brand presence. I’m actively expanding my skills in ad platforms, SEO tools, email automation, and prompt engineering.</p>
+          <div style="margin-top:12px" class="chips" aria-hidden="false">
+            <div class="chip">Diploma in Digital Marketing — Arab Academy</div>
+            <div class="chip">Seeking internship / junior roles</div>
+            <div class="chip">Social Media • Ads • SEO • AI</div>
+          </div>
+        </div>
+        <aside style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(11,19,32,0.03)">
+          <h4 style="margin-top:0">Quick Facts</h4>
+          <p class="small" style="margin:6px 0"><strong>Email:</strong> abanoubwasfii@gmail.com</p>
+          <p class="small" style="margin:6px 0"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abanoub-wasfii" target="_blank" rel="noopener">linkedin.com/in/abanoub-wasfii</a></p>
+          <p class="small" style="margin:6px 0"><strong>WhatsApp:</strong> <a href="https://wa.me/201281666438" target="_blank" rel="noopener">+20 12816664384</a></p>
+        </aside>
+      </div>
+    </section>
 
-<div class="card">
-<h2>من أنا؟</h2>
-<p>
-أنا أبانوب وصفي من الإسكندرية.
-أدرس إدارة الأعمال وأهتم بالاستثمار وتحليل الخطوط (Graphology).
-</p>
-</div>
+    <section id="skills" class="container">
+      <h2>Skills</h2>
+      <p class="small">Practical marketing skills organized by domain — ready to apply to real campaigns.</p>
+      <div class="skills-grid" style="margin-top:16px">
+        <div class="skill-card">
+          <h4>Marketing Fundamentals</h4>
+          <ul><li>Market research, audience segmentation, KPI selection, A/B testing</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>Social Media Management</h4>
+          <ul><li>Facebook • Instagram • TikTok • Snapchat — content calendars & community management</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>Advertising</h4>
+          <ul><li>Meta Ads • TikTok Ads • Snapchat Ads • Media Buying — setup, targeting, creative testing</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>Content Marketing & Storytelling</h4>
+          <ul><li>Video-first storytelling, captions, repurposing UGC</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>SEO & SEM with AI</h4>
+          <ul><li>Keyword research, on-page SEO, AI-generated briefs</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>AI & Prompt Engineering</h4>
+          <ul><li>ChatGPT for ideation, ad copy, reporting automation; reproducible prompts</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>Email Marketing & Personalization</h4>
+          <ul><li>Segmentation, automations, subject-line testing</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>Affiliate & Influencer Marketing</h4>
+          <ul><li>Partner outreach basics, micro-influencer collaborations, performance tracking</li></ul>
+        </div>
+        <div class="skill-card">
+          <h4>Strategy & LinkedIn Branding</h4>
+          <ul><li>Funnel design, growth experiments, LinkedIn profile & outreach optimization</li></ul>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h2>مهاراتي</h2>
-<p>التحليل المالي - الاستثمار - الجرافولوجي - التسويق الرقمي</p>
-</div>
+    <section id="experience" class="container">
+      <h2>Experience</h2>
+      <div class="experience">
+        <div class="exp-card" aria-labelledby="lim-head">
+          <h3 id="lim-head" style="margin:0 0 6px">Limousine Services — Social Media Manager</h3>
+          <p class="small" style="margin:6px 0"><strong>Responsibilities:</strong> Content planning & scheduling, audience engagement, page management, content creation & copywriting, branding improvements.</p>
+          <p class="small" style="margin:6px 0"><strong>Achievements:</strong> Developed content for travelers & business customers, improved page consistency & engagement, created marketing-focused posts to support awareness and bookings.</p>
+        </div>
 
-<div class="card">
-<h2>هدفي</h2>
-<p>
-بناء مشروع احترافي في مجال الجرافولوجي ومساعدة الآخرين على فهم شخصياتهم.
-</p>
-</div>
+        <div class="exp-card" aria-labelledby="graph-head">
+          <h3 id="graph-head" style="margin:0 0 6px">Graphology (Handwriting Analysis) — Social Media Manager</h3>
+          <p class="small" style="margin:6px 0"><strong>Responsibilities:</strong> Social content planning, educational content creation, audience interaction, personal branding support.</p>
+          <p class="small" style="margin:6px 0"><strong>Achievements:</strong> Produced informative posts on handwriting analysis, increased engagement, and built a consistent content strategy and templates.</p>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section id="projects" class="container" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects & Case Studies</h2>
+      <p class="small">Four representative projects that show practical skills, strategy and measurable outcomes. Click each card to view the case study.</p>
+      <div class="projects-grid" style="margin-top:18px">
+        <!-- Project 1 -->
+        <article class="project" role="article" aria-labelledby="p1">
+          <img src="https://via.placeholder.com/600x300.png?text=Limousine+Campaign" alt="Limousine campaign thumbnail">
+          <h3 id="p1">Social Media Strategy — Limousine Services</h3>
+          <p class="small">Objective: Increase brand awareness and generate inquiries for airport & corporate bookings.</p>
+          <div class="kpis">
+            <div class="kpi">Reach +95%</div>
+            <div class="kpi">Followers +35%</div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px;">
+            <button class="btn btn-outline" onclick="openModal(1)">View Case Study</button>
+          </div>
+        </article>
 
-<footer>
-© 2026 Abanoub Wasafi
-</footer>
+        <!-- Project 2 -->
+        <article class="project" role="article" aria-labelledby="p2">
+          <img src="https://via.placeholder.com/600x300.png?text=Meta+Ads+Campaign" alt="Meta Ads campaign thumbnail">
+          <h3 id="p2">Meta Ads Campaign — Lead Gen</h3>
+          <p class="small">Objective: Generate qualified local leads through lead-gen ads and creative testing.</p>
+          <div class="kpis">
+            <div class="kpi">CPL $6.50</div>
+            <div class="kpi">CTR 2.1%</div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px;">
+            <button class="btn btn-outline" onclick="openModal(2)">View Case Study</button>
+          </div>
+        </article>
 
+        <!-- Project 3 -->
+        <article class="project" role="article" aria-labelledby="p3">
+          <img src="https://via.placeholder.com/600x300.png?text=SEO+Optimization" alt="SEO optimization thumbnail">
+          <h3 id="p3">SEO Optimization — Local Services</h3>
+          <p class="small">Objective: Improve organic visibility and drive qualified traffic to service pages.</p>
+          <div class="kpis">
+            <div class="kpi">Organic sessions +42%</div>
+            <div class="kpi">Top 10 keywords +5</div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px;">
+            <button class="btn btn-outline" onclick="openModal(3)">View Case Study</button>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project" role="article" aria-labelledby="p4">
+          <img src="https://via.placeholder.com/600x300.png?text=Email+Campaign" alt="Email campaign thumbnail">
+          <h3 id="p4">Email Marketing Campaign — Launch & Retention</h3>
+          <p class="small">Objective: Increase engagement and conversions with segmented, personalized email flows.</p>
+          <div class="kpis">
+            <div class="kpi">Open 30%</div>
+            <div class="kpi">CTR 5%</div>
+          </div>
+          <div style="margin-top:auto;display:flex;gap:8px;">
+            <button class="btn btn-outline" onclick="openModal(4)">View Case Study</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Modals for case studies -->
+    <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-hidden="true" aria-modal="true">
+      <div class="modal" id="modalContent" role="document" aria-labelledby="modalTitle">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <h3 id="modalTitle"></h3>
+          <button class="close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+        </div>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <section id="certifications" class="container">
+      <h2>Certifications</h2>
+      <div style="background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(11,19,32,0.03)">
+        <p style="margin:6px 0"><strong>Diploma in Digital Marketing</strong> — Arab Academy for Science, Technology & Maritime Transport</p>
+        <p class="small" style="margin:6px 0">Add short courses (Google Analytics, Meta Blueprint) here as you complete them.</p>
+      </div>
+    </section>
+
+    <section id="tools" class="container">
+      <h2>Tools</h2>
+      <p class="small">Familiar with modern marketing platforms and quick to learn new tools.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <div class="chip">Canva</div>
+        <div class="chip">Meta Business Suite</div>
+        <div class="chip">ChatGPT</div>
+        <div class="chip">Google Analytics (GA4)</div>
+        <div class="chip">Google Search Console</div>
+        <div class="chip">SEMrush</div>
+        <div class="chip">Mailchimp</div>
+        <div class="chip">TikTok Ads Manager</div>
+      </div>
+    </section>
+
+    <section id="why" class="container">
+      <h2>Why Work With Me</h2>
+      <ul style="color:var(--muted);padding-left:18px">
+        <li>Strong foundation in digital marketing theory and hands-on campaign execution.</li>
+        <li>Practical experience managing real social pages for limousine services and graphology brands.</li>
+        <li>AI-first approach to ideation, ad copy and reporting — faster delivery and consistent quality.</li>
+        <li>Fast learner, proactive, and adaptable — eager to contribute and grow.</li>
+        <li>Focused on data-driven growth and creative content that drives inquiries and conversions.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Let’s Connect</h2>
+      <p class="small">I’m actively looking for internship or junior opportunities. I reply quickly and can share full case study decks or a resume on request.</p>
+
+      <div class="contact-grid" style="margin-top:16px">
+        <form id="contactForm" onsubmit="return submitForm(event)">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Brief message or role you're offering"></textarea>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <a class="resume" href="#" onclick="downloadResume()">Download Resume</a>
+          </div>
+          <p class="small" style="margin-top:10px">Suggested subject line for recruiters: "Junior Digital Marketer — Internship Inquiry — Abanoub Wasafi"</p>
+        </form>
+
+        <aside style="background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(11,19,32,0.03)">
+          <h4 style="margin-top:0">Contact</h4>
+          <p class="small" style="margin:6px 0"><strong>Email:</strong> <a href="mailto:abanoubwasfii@gmail.com">abanoubwasfii@gmail.com</a></p>
+          <p class="small" style="margin:6px 0"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abanoub-wasfii" target="_blank" rel="noopener">linkedin.com/in/abanoub-wasfii</a></p>
+          <p class="small" style="margin:6px 0"><strong>WhatsApp:</strong> <a href="https://wa.me/201281666438" target="_blank" rel="noopener">+20 12816664384</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="padding:20px 0">
+      <div style="max-width:var(--maxw);margin:0 auto;padding:0 20px">
+        <p style="margin:0 0 8px">© <span id="year"></span> Abanoub Wasafi — Junior Digital Marketer</p>
+        <p class="small" style="margin:0">Open to internships and junior roles • <a href="https://www.linkedin.com/in/abanoub-wasfii" target="_blank" rel="noopener">LinkedIn</a> • <a href="mailto:abanoubwasfii@gmail.com">Email</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Modal content definitions
+    const caseStudies = {
+      1: {
+        title: 'Social Media Strategy — Limousine Services',
+        body: `<p><strong>Objective:</strong> Increase brand awareness and generate inquiries for airport & corporate bookings.</p>
+        <p><strong>Target Audience:</strong> Travelers, airport customers, business professionals (age 25–50) in local service area.</p>
+        <p><strong>Strategy:</strong> 3-month content calendar with short-form video, testimonials, local influencer micro-collabs, UTM-coded promos for tracking.</p>
+        <p><strong>Tools:</strong> Canva, Meta Business Suite, ChatGPT, Google Analytics (UTM)</p>
+        <p><strong>KPIs:</strong> Reach, follower growth, engagement rate, booking inquiries</p>
+        <p><strong>Results (sample):</strong> Reach +95% in peak month; Followers +35% over 3 months; Engagement improved from 0.9% → 3.0%; Inquiries +22% (tracked)</p>`
+      },
+      2: {
+        title: 'Meta Ads Campaign — Local Lead Gen',
+        body: `<p><strong>Objective:</strong> Generate qualified local leads for ride bookings.</p>
+        <p><strong>Strategy:</strong> Lead Generation funnel with prospecting & retargeting, creative testing (video, image, testimonial), weekly bid optimization.</p>
+        <p><strong>Tools:</strong> Meta Ads Manager, Canva, Google Sheets</p>
+        <p><strong>KPIs:</strong> CTR, CPC, Cost per Lead (CPL), Lead quality</p>
+        <p><strong>Results (sample):</strong> CTR 2.1%; Avg CPC $0.40; CPL $6.50 after optimization; 120 leads in month 1 (30% converted to calls/bookings)</p>`
+      },
+      3: {
+        title: 'SEO Optimization — Local Services',
+        body: `<p><strong>Objective:</strong> Improve organic visibility for service pages and drive qualified traffic.</p>
+        <p><strong>Strategy:</strong> Keyword gap analysis, on-page SEO (titles, meta, schema), internal linking, short blog series from AI-generated briefs edited for quality.</p>
+        <p><strong>Tools:</strong> SEMrush, Google Search Console, ChatGPT, Google Analytics</p>
+        <p><strong>KPIs:</strong> Keyword rankings, organic impressions & clicks, organic leads</p>
+        <p><strong>Results (sample):</strong> Organic sessions to targeted pages +42% in 3 months; 5 target keywords moved into top 10; Organic leads +20%</p>`
+      },
+      4: {
+        title: 'Email Marketing Campaign — Launch & Retention',
+        body: `<p><strong>Objective:</strong> Increase engagement & conversions for a product launch and retention flow.</p>
+        <p><strong>Strategy:</strong> 5-email sequence: teaser, launch, social proof, urgency, post-purchase onboarding. Segment by engagement and past purchases; A/B test subject lines.</p>
+        <p><strong>Tools:</strong> Mailchimp, Canva, Google Analytics (UTMs)</p>
+        <p><strong>KPIs:</strong> Open rate, CTR, conversion rate, unsubscribe rate</p>
+        <p><strong>Results (sample):</strong> Avg open 30% (top 36%); CTR 5%; Conversion rate 3.4%; Campaign lifted repeat purchases +12% for engaged cohort</p>`
+      }
+    };
+
+    const backdrop = document.getElementById('modalBackdrop');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+
+    function openModal(id){
+      const cs = caseStudies[id];
+      modalTitle.innerHTML = cs.title;
+      modalBody.innerHTML = cs.body;
+      backdrop.style.display = 'flex';
+      backdrop.setAttribute('aria-hidden','false');
+    }
+    function closeModal(){
+      backdrop.style.display = 'none';
+      backdrop.setAttribute('aria-hidden','true');
+    }
+    backdrop.addEventListener('click', (e)=>{ if(e.target===backdrop) closeModal(); });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+
+    // Contact form mailto fallback
+    function submitForm(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = encodeURIComponent('Junior Digital Marketer — Inquiry from ' + name);
+      const body = encodeURIComponent(`Name: ${decodeURIComponent(name)}%0D%0AEmail: ${decodeURIComponent(email)}%0D%0A%0D%0A${decodeURIComponent(message)}`);
+      window.location.href = `mailto:abanoubwasfii@gmail.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+
+    function downloadResume(){
+      alert('Replace this with a link to your resume PDF. Example: /assets/Abanoub_Wasafi_Resume.pdf');
+    }
+  </script>
 </body>
 </html>
