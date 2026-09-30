@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Marketing Services | Abanoub Wasafi</title>
+  <meta name="description" content="Professional digital marketing services: social media management, digital advertising, marketing strategies, market research, and conversion optimization." />
+  <meta name="keywords" content="digital marketing, social media management, Google Ads, Meta Ads, marketing campaigns" />
+  <meta name="theme-color" content="#0A66C2" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --primary:#0A66C2;
+      --secondary:#0B1320;
+      --accent:#FF6B6B;
+      --support:#00B894;
+      --bg:#f4f8fb;
+      --card:#ffffff;
+      --muted:#5f6f7a;
+      --line:#e7edf3;
+      --shadow:0 12px 28px rgba(11,19,32,0.08);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:var(--secondary);line-height:1.7}
+    a{text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(11,19,32,0.04);box-shadow:0 2px 12px rgba(11,19,32,0.04)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:700;font-size:1.2rem;font-family:Poppins,Inter;color:var(--secondary)}
+    .nav-links{display:flex;align-items:center;gap:20px;list-style:none;margin:0;padding:0}
+    .nav-links a{color:var(--muted);font-weight:600;font-size:0.96rem}
+    .nav-links a:hover{color:var(--primary)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:700;cursor:pointer;transition:0.2s ease;border:1px solid transparent;font-size:0.95rem}
+    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 18px rgba(10,102,194,0.22)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,102,194,0.3)}
+    .btn-accent{background:var(--accent);color:#fff;box-shadow:0 8px 18px rgba(255,107,107,0.2)}
+    .btn-accent:hover{transform:translateY(-2px)}
+    .btn-outline{background:transparent;border:1px solid var(--line);color:var(--secondary)}
+    .btn-outline:hover{background:rgba(10,102,194,0.05);border-color:var(--primary)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:38px;align-items:center;padding:64px 0}
+    .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(10,102,194,0.08);color:var(--primary);font-size:.8rem;font-weight:700;margin-bottom:12px}
+    h1,h2,h3{margin:0 0 14px;line-height:1.3}
+    h1{font-size:clamp(2.2rem,3vw,3.2rem);font-family:Poppins,Inter;font-weight:700}
+    h2{font-size:clamp(1.8rem,2vw,2.5rem);font-family:Poppins,Inter;font-weight:700}
+    h3{font-size:1.3rem;font-family:Poppins,Inter;font-weight:700}
+    .lead{font-size:1.08rem;color:var(--muted);margin:0 0 26px;line-height:1.7}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:18px}
+    .hero-box{background:linear-gradient(135deg, rgba(10,102,194,0.08), rgba(0,184,148,0.08));border-radius:24px;padding:26px;border:1px solid rgba(10,102,194,0.05);box-shadow:var(--shadow)}
+    .hero-graphic{font-size:4.2rem;text-align:center;margin-bottom:10px}
+    .check-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+    .check-list li{display:flex;align-items:flex-start;gap:10px;color:var(--muted)}
+    .check-list li::before{content:'✓';color:var(--support);font-weight:800;flex-shrink:0}
+    .section{padding:72px 0}
+    .section-head{margin-bottom:28px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:var(--card);border:1px solid rgba(11,19,32,0.05);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);transition:all 0.3s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(11,19,32,0.1)}
+    .icon{font-size:2.2rem;margin-bottom:12px}
+    .price-box{background:linear-gradient(145deg, rgba(10,102,194,0.06), rgba(255,107,107,0.06));border-radius:18px;padding:24px;box-shadow:var(--shadow);border:1px solid rgba(10,102,194,0.08)}
+    .price{font-size:2.3rem;font-weight:800;color:var(--primary);margin:0}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .faq{background:var(--card);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+    .faq h4{margin:0 0 8px;font-weight:700}
+    .testimonial-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .testimonial{background:var(--card);padding:22px;border-radius:16px;box-shadow:var(--shadow)}
+    .quote{margin:0 0 18px;color:var(--muted);font-style:italic}
+    .author{font-weight:700;color:var(--primary)}
+    .booking-wrap{display:grid;grid-template-columns:1fr 340px;gap:22px}
+    form{background:var(--card);padding:24px;border-radius:18px;box-shadow:var(--shadow)}
+    .field{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+    label{font-weight:700;font-size:.92rem}
+    input,textarea,button{font:inherit}
+    input,textarea{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--secondary);font-size:0.95rem}
+    input:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(10,102,194,0.1)}
+    textarea{min-height:120px;resize:vertical}
+    .contact-box{background:var(--card);padding:24px;border-radius:18px;box-shadow:var(--shadow)}
+    .contact-links a{display:block;margin:10px 0;color:var(--primary);font-weight:700;transition:all 0.2s}
+    .contact-links a:hover{transform:translateX(4px)}
+    .cta-panel{background:linear-gradient(135deg, rgba(10,102,194,0.08), rgba(255,107,107,0.08));padding:42px 24px;border-radius:24px;text-align:center;box-shadow:var(--shadow);border:1px solid rgba(10,102,194,0.1)}
+    .actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+    footer{padding:40px 0 50px;background:#edf3f8;border-top:1px solid rgba(11,19,32,0.04)}
+    .footer-grid{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+    .footer-links a{color:var(--muted);transition:color 0.2s}
+    .footer-links a:hover{color:var(--primary)}
+    @media (max-width: 900px){
+      .hero,.booking-wrap,.grid-3,.grid-2,.testimonial-wrap{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      .nav{padding:10px 0}
+      .nav-links{justify-content:center;flex-wrap:wrap;gap:12px}
+      .hero{padding:40px 0}
+      .section{padding:48px 0}
+      .footer-grid{justify-content:center;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Abanoub Wasafi</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="digital-marketing.html">Digital Marketing</a></li>
+          <li><a href="handwriting-analysis.html">Handwriting Analysis</a></li>
+          <li><a href="#booking">Book</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <span class="eyebrow">Digital Marketing Services</span>
+        <h1>Grow Your Brand in the Digital Market</h1>
+        <p class="lead">We provide comprehensive digital marketing strategies that build your brand presence, increase customer engagement, and boost conversions across the right channels for your business.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#booking">Book Service</a>
+          <a class="btn btn-outline" href="https://wa.me/201281666438" target="_blank">Contact via WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-box">
+        <div class="hero-graphic">📣</div>
+        <ul class="check-list">
+          <li>Custom marketing strategy for your brand</li>
+          <li>Digital ads on Meta and Google</li>
+          <li>Content management & continuous engagement</li>
+          <li>Clear performance reports</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-head">
+        <h2>What We Offer</h2>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="icon">📱</div>
+          <h3>Social Media Management</h3>
+          <p class="muted">Content scheduling, post design, monthly plans, and customer engagement management across the right platforms for you.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🎯</div>
+          <h3>Advertising Campaigns</h3>
+          <p class="muted">Well-researched marketing campaigns that target the right audience and improve cost per acquisition with better ROI.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📊</div>
+          <h3>Analysis & Reports</h3>
+          <p class="muted">Performance review, data analysis, and continuous strategy improvements to ensure what works is optimized further.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Packages & Services</h2>
+      <div class="grid-3">
+        <article class="price-box">
+          <h3>Starter Package</h3>
+          <p class="price">$299</p>
+          <p class="muted">For small projects that need initial digital presence.</p>
+          <ul class="check-list">
+            <li>Monthly content plan</li>
+            <li>5 posts per month</li>
+            <li>Basic account review</li>
+          </ul>
+        </article>
+        <article class="price-box">
+          <h3>Growth Package</h3>
+          <p class="price">$699</p>
+          <p class="muted">For businesses wanting to expand reach and improve results.</p>
+          <ul class="check-list">
+            <li>Full account management</li>
+            <li>Targeted advertising</li>
+            <li>Monthly performance reports</li>
+          </ul>
+        </article>
+        <article class="price-box">
+          <h3>Professional Package</h3>
+          <p class="price">$1,299</p>
+          <p class="muted">Complete solutions for complex digital campaigns.</p>
+          <ul class="check-list">
+            <li>Full marketing strategy</li>
+            <li>Multi-channel management</li>
+            <li>Continuous optimization</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>How It Works</h2>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Our Process</h3>
+          <ul class="check-list">
+            <li>Define project goals and target audience</li>
+            <li>Analyze competitors and market</li>
+            <li>Create content & advertising plan</li>
+            <li>Launch campaign and monitor performance</li>
+            <li>Update strategy regularly</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Benefits</h3>
+          <ul class="check-list">
+            <li>Increase brand awareness</li>
+            <li>Reach the right audience</li>
+            <li>Improve conversion rates</li>
+            <li>Save time on management & planning</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="grid-2">
+        <div class="faq">
+          <h4>Do I need previous experience?</h4>
+          <p class="muted">No, we start by understanding your goals and create the right plan for you.</p>
+        </div>
+        <div class="faq">
+          <h4>Can I modify plans later?</h4>
+          <p class="muted">Yes, you can adjust services and upgrade packages as your needs grow.</p>
+        </div>
+        <div class="faq">
+          <h4>Do you provide regular reports?</h4>
+          <p class="muted">Yes, we provide performance reports regularly with insights and continuous improvements.</p>
+        </div>
+        <div class="faq">
+          <h4>Is this suitable for small businesses?</h4>
+          <p class="muted">Absolutely, we have solutions for small, medium, and large businesses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Client Testimonials</h2>
+      <div class="testimonial-wrap">
+        <article class="testimonial">
+          <p class="quote">"Everything was clear and organized. Results showed quickly through the marketing campaign."</p>
+          <div class="author">- Sarah</div>
+        </article>
+        <article class="testimonial">
+          <p class="quote">"Best digital marketing service in terms of organization, communication, and professional execution."</p>
+          <div class="author">- Khalid</div>
+        </article>
+        <article class="testimonial">
+          <p class="quote">"We followed a custom plan and our results exceeded expectations significantly."</p>
+          <div class="author">- Rana</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="booking" class="container section">
+      <div class="booking-wrap">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <h2 style="margin-bottom:18px">Service Booking Form</h2>
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your full name" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="e.g. +201234567890" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="example@mail.com" required />
+          </div>
+          <div class="field">
+            <label for="need">Describe Your Needs</label>
+            <textarea id="need" name="need" placeholder="Tell us about your business and what you want to achieve"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Request</button>
+        </form>
+
+        <aside class="contact-box">
+          <h3>Contact Directly</h3>
+          <div class="contact-links">
+            <a href="https://wa.me/201281666438" target="_blank">💬 WhatsApp</a>
+            <a href="mailto:abanoubwasfii@gmail.com">📧 Email</a>
+            <a href="tel:+201281666438">📞 Call</a>
+          </div>
+          <p class="muted" style="margin-top:18px">We respond quickly to discuss the best plan for your needs.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="cta-panel">
+        <h3>Ready to Grow?</h3>
+        <p>Start now with a custom marketing plan that fits your goals and budget.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#booking">Book Now</a>
+          <a class="btn btn-accent" href="https://wa.me/201281666438" target="_blank">Contact WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Abanoub Wasafi</strong><br>
+        <span class="muted">Digital Marketing Services</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="handwriting-analysis.html">Handwriting Analysis</a>
+        <a href="https://wa.me/201281666438" target="_blank">WhatsApp</a>
+        <a href="mailto:abanoubwasfii@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
