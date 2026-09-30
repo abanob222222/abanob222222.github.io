@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تحليل الخط | Abanoub Wasafi</title>
+  <meta name="description" content="خدمة تحليل الخط الاحترافية: فهم شخصية الفرد، قدراته، ورؤى تطويرية من خلال دراسة خطه بشكل دقيق ومفصل." />
+  <meta name="keywords" content="تحليل الخط، الجرافولوجيا، تحليل شخصية، تقرير خط شخصي" />
+  <meta name="theme-color" content="#0A66C2" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --primary:#0A66C2;
+      --secondary:#0B1320;
+      --accent:#FF6B6B;
+      --support:#00B894;
+      --bg:#f4f8fb;
+      --card:#ffffff;
+      --muted:#5f6f7a;
+      --line:#e7edf3;
+      --shadow:0 12px 28px rgba(11,19,32,0.08);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Cairo',sans-serif;background:var(--bg);color:var(--secondary);line-height:1.7;direction:rtl}
+    a{text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(11,19,32,0.04);box-shadow:0 2px 12px rgba(11,19,32,0.04)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800;font-size:1.2rem;color:var(--secondary)}
+    .nav-links{display:flex;align-items:center;gap:20px;list-style:none;margin:0;padding:0}
+    .nav-links a{color:var(--muted);font-weight:600;font-size:0.96rem}
+    .nav-links a:hover{color:var(--primary)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:700;cursor:pointer;transition:0.2s ease;border:1px solid transparent}
+    .btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 18px rgba(10,102,194,0.22)}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-accent{background:var(--accent);color:#fff;box-shadow:0 8px 18px rgba(255,107,107,0.2)}
+    .btn-outline{background:transparent;border-color:var(--line);color:var(--secondary)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center;padding:64px 0}
+    .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(10,102,194,0.08);color:var(--primary);font-size:.8rem;font-weight:700;margin-bottom:12px}
+    h1,h2,h3{margin:0 0 14px;line-height:1.4}
+    h1{font-size:clamp(2.2rem,3vw,3.2rem)}
+    h2{font-size:clamp(1.8rem,2vw,2.5rem)}
+    .lead{font-size:1.08rem;color:var(--muted);margin:0 0 26px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:18px}
+    .hero-box{background:linear-gradient(135deg, rgba(10,102,194,0.08), rgba(0,184,148,0.08));border-radius:24px;padding:26px;border:1px solid rgba(10,102,194,0.05);box-shadow:var(--shadow)}
+    .hero-graphic{font-size:4.2rem;text-align:center;margin-bottom:10px}
+    .check-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+    .check-list li{display:flex;align-items:flex-start;gap:10px;color:var(--muted)}
+    .check-list li::before{content:'✓';color:var(--support);font-weight:800}
+    .section{padding:72px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:var(--card);border:1px solid rgba(11,19,32,0.05);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    .icon{font-size:2.2rem;margin-bottom:12px}
+    .sample-box{background:var(--card);padding:30px;border-radius:18px;box-shadow:var(--shadow)}
+    .sample-box .sample-title{font-weight:800;color:var(--primary);display:block;margin-bottom:12px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .booking-wrap{display:grid;grid-template-columns:1fr 340px;gap:22px}
+    form{background:var(--card);padding:24px;border-radius:18px;box-shadow:var(--shadow)}
+    .field{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+    label{font-weight:700;font-size:.92rem}
+    input,textarea,button{font:inherit}
+    input,textarea{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--secondary)}
+    textarea{min-height:120px;resize:vertical}
+    .contact-box{background:var(--card);padding:24px;border-radius:18px;box-shadow:var(--shadow)}
+    .contact-links a{display:block;margin:10px 0;color:var(--primary);font-weight:700}
+    footer{padding:40px 0 50px;background:#edf3f8;border-top:1px solid rgba(11,19,32,0.04)}
+    .footer-grid{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+    .footer-links a{color:var(--muted)}
+    @media (max-width: 900px){
+      .hero,.booking-wrap,.grid-3,.grid-2{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      .nav{display:block;text-align:center}
+      .nav-links{justify-content:center;flex-wrap:wrap;margin-top:12px}
+      .footer-grid{justify-content:center;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Abanoub Wasafi</div>
+      <nav aria-label="التنقل الرئيسي">
+        <ul class="nav-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="digital-marketing.html">التسويق الإلكتروني</a></li>
+          <li><a href="handwriting-analysis.html">تحليل الخط</a></li>
+          <li><a href="#booking">حجز</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <span class="eyebrow">خدمة تحليل الخط</span>
+        <h1>اكتشف ملامح شخصيتك وقدراتك من خلال خط يدك</h1>
+        <p class="lead">تحليل الخط (الجرافولوجيا) يساعدك على فهم طبيعة شخصيتك، نقاط قوتك، نقاط ضعفك، واستجابتك للقرارات الحياتية والمهنية بطريقة مهنية ومفصلة.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#booking">احجز الخدمة</a>
+          <a class="btn btn-outline" href="https://wa.me/201281666438" target="_blank">تواصل واتساب</a>
+        </div>
+      </div>
+      <div class="hero-box">
+        <div class="hero-graphic">✍️</div>
+        <ul class="check-list">
+          <li>تحليل شخصي دقيق</li>
+          <li>تقرير مفصل ومرئي</li>
+          <li>توصيات عملية للتطوير</li>
+          <li>مناسب للطلاب، المهنيين، والعملاء</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>ما هي خدمة تحليل الخط؟</h2>
+      <p class="lead">هي خدمة تحليلية تستند إلى ملامح الخط، حيث يتم دراسة أحجام الحروف، الاتجاهات، الضغط، المسافات، والأنماط العامة في الكتابة لفهم الشخصية والميول والقدرات.</p>
+      <div class="grid-3">
+        <article class="card">
+          <div class="icon">🧠</div>
+          <h3>فهم الشخصية</h3>
+          <p class="muted">اكتشف طبيعة شخصيتك، أسلوبك في اتخاذ القرار، وكيفية تعاملك مع الآخرين.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🎯</div>
+          <h3>التوجيه المهني</h3>
+          <p class="muted">معلومات تساعدك على فهم مهاراتك وميولك المهنية بشكل أفضل قبل اتخاذ قرار مهم.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📘</div>
+          <h3>التطوير الذاتي</h3>
+          <p class="muted">تعرف على نقاط قوتك والفرص التي يمكنك تطويرها في حياتك اليومية أو المهنية.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>آلية العمل</h2>
+      <div class="grid-2">
+        <article class="card">
+          <h3>الخطوات</h3>
+          <ul class="check-list">
+            <li>إرسال صورة واضحة أو مستند كتابة</li>
+            <li>مراجعة الخط بدقة ومقارنته بالمعايير</li>
+            <li>تحديد السمات النفسية والقدرات</li>
+            <li>إعداد تقرير شرح يساعدك على الفهم</li>
+            <li>مناقشة الملاحظات عند الحاجة</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>مزايا الخدمة</h3>
+          <ul class="check-list">
+            <li>تقرير مفصل وموضح</li>
+            <li>أسلوب احترافي وسهل الفهم</li>
+            <li>تقييم شامل لملامح الشخصية</li>
+            <li>مناسب للأشخاص والطلاب والمهنيين</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>مثال توضيحي</h2>
+      <div class="sample-box">
+        <span class="sample-title">مثال على التقرير:</span>
+        <p class="muted">الخط القوي والمتوازن يدل على شخصية مستقرة، ذات قدرة على التنظيم، تحكم في القرار، واهتمام بالتفاصيل. أما الخط المائل والمرن فيشير إلى شخص اجتماعي، حساس، وقادر على التكيف مع المواقف المختلفة.</p>
+      </div>
+    </section>
+
+    <section id="booking" class="container section">
+      <div class="booking-wrap">
+        <form action="mailto:abanoubwasfii@gmail.com" method="post" enctype="text/plain">
+          <h2 style="margin-bottom:18px">نموذج حجز الخدمة</h2>
+          <div class="field">
+            <label for="name">الاسم</label>
+            <input id="name" name="name" type="text" placeholder="اكتب اسمك الكامل" required />
+          </div>
+          <div class="field">
+            <label for="phone">رقم الهاتف</label>
+            <input id="phone" name="phone" type="tel" placeholder="مثال: 9665XXXXXXXX" required />
+          </div>
+          <div class="field">
+            <label for="email">البريد الإلكتروني</label>
+            <input id="email" name="email" type="email" placeholder="example@mail.com" required />
+          </div>
+          <div class="field">
+            <label for="upload">رفع صورة الخط أو المستند</label>
+            <input id="upload" name="upload" type="file" />
+          </div>
+          <div class="field">
+            <label for="notes">ملاحظات إضافية</label>
+            <textarea id="notes" name="notes" placeholder="اكتب أي ملاحظات أو أسئلة ترغب في إضافتها"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+        </form>
+
+        <aside class="contact-box">
+          <h3>تواصل مباشر</h3>
+          <div class="contact-links">
+            <a href="https://wa.me/201281666438" target="_blank">💬 واتساب</a>
+            <a href="mailto:abanoubwasfii@gmail.com">📧 البريد الإلكتروني</a>
+            <a href="tel:+201281666438">📞 الاتصال المباشر</a>
+          </div>
+          <p class="muted" style="margin-top:18px">سنتواصل معك لتأكيد الطلب وتوضيح التفاصيل اللازمة.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="cta-panel">
+        <h3>هل تريد تحليل خطك الآن؟</h3>
+        <p>أرسل خطك اليوم واطلب تحليلًا احترافيًا يساعدك على فهم نفسك بشكل أعمق.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#booking">احجز الآن</a>
+          <a class="btn btn-accent" href="https://wa.me/201281666438" target="_blank">تواصل واتساب</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Abanoub Wasafi</strong><br>
+        <span class="muted">خدمة تحليل الخط</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="digital-marketing.html">التسويق الإلكتروني</a>
+        <a href="https://wa.me/201281666438" target="_blank">واتساب</a>
+        <a href="mailto:abanoubwasfii@gmail.com">بريد</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
