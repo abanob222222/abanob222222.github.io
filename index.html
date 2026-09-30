@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abanoub Wasafi — Junior Digital Marketer | Social Media, Performance & AI</title>
-  <meta name="description" content="Diploma-trained junior digital marketer with hands-on experience managing social pages for a limousine service and a graphology brand. Specializes in social media management, paid ads, SEO and AI-powered marketing." />
+  <meta name="description" content="Diploma-trained junior digital marketer with hands-on experience managing social pages for a limousine service and a graphology brand. Specializes in social media, performance marketing & AI.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -36,14 +36,19 @@
     .brand{font-family:Poppins,Inter;font-weight:700;color:var(--text);font-size:18px}
     nav ul{display:flex;gap:16px;align-items:center;margin:0;padding:0;list-style:none}
     nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer}
+    nav a:hover{color:var(--primary)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;transition:0.2s}
     .btn-primary{background:var(--primary);color:#fff;border:1px solid var(--primary)}
+    .btn-primary:hover{opacity:0.9;transform:translateY(-1px)}
     .btn-outline{background:transparent;border:1px solid rgba(11,19,32,0.08);color:var(--text)}
+    .btn-outline:hover{background:rgba(10,102,194,0.05)}
+    .btn-accent{background:var(--accent);color:#fff;border:1px solid var(--accent)}
+    .btn-accent:hover{opacity:0.9;transform:translateY(-1px)}
     .hero{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:center;padding:48px 0}
     .hero h1{font-family:Poppins;font-size:34px;margin:0 0 12px}
     .hero p.lead{margin:0 0 20px;color:var(--muted);font-size:16px}
     .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .hero-visual{background:linear-gradient(180deg, rgba(10,102,194,0.06), rgba(0,184,148,0.03));padding:20px;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(11,19,32,0.05)}
+    .hero-visual{background:linear-gradient(180deg, rgba(10,102,194,0.06), rgba(0,184,148,0.03));padding:20px;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(11,19,32,0.03)}
     .headshot{width:320px;max-width:100%;height:320px;border-radius:12px;display:block;object-fit:cover;object-position:center;box-shadow:0 12px 24px rgba(11,19,32,0.08)}
     section{padding:48px 0;border-top:1px solid rgba(11,19,32,0.03)}
     h2{font-family:Poppins;margin:0 0 16px;font-size:22px}
@@ -60,11 +65,18 @@
     .project img{width:100%;height:140px;object-fit:cover;border-radius:8px}
     .kpis{display:flex;gap:10px;flex-wrap:wrap}
     .kpi{background:rgba(0,184,148,0.08);padding:8px 10px;border-radius:8px;font-weight:700;color:var(--support);font-size:14px}
+    .services-section{background:linear-gradient(135deg,rgba(10,102,194,0.04),rgba(0,184,148,0.04));border-radius:12px;padding:32px}
+    .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:24px}
+    .service-item{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 4px 12px rgba(11,19,32,0.05)}
+    .service-item h3{margin:0 0 8px;font-size:18px;font-family:Poppins}
+    .service-item p{margin:0 0 12px;color:var(--muted);font-size:14px}
+    .service-item .btn-group{display:flex;gap:8px;flex-wrap:wrap}
     footer{padding:32px 0;text-align:center;color:var(--muted);font-size:14px}
     @media (max-width:1000px){
       .projects-grid{grid-template-columns:repeat(2,1fr)}
       .two-col{grid-template-columns:1fr}
       .hero{grid-template-columns:1fr 300px}
+      .services-grid{grid-template-columns:1fr}
     }
     @media (max-width:700px){
       .nav{padding:8px 16px}
@@ -95,6 +107,7 @@
       <nav>
         <ul>
           <li><a href="#main">Home</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -122,12 +135,54 @@
       </div>
     </section>
 
+    <section id="services" class="container services-section">
+      <h2>Professional Services</h2>
+      <p class="small">I offer specialized services in digital marketing and handwriting analysis. Book your service today!</p>
+      <div class="services-grid">
+        <article class="service-item">
+          <h3>📱 Digital Marketing Services</h3>
+          <p>Comprehensive digital marketing strategies including social media management, advertising campaigns, content creation, and performance analysis to grow your brand online.</p>
+          <div class="service-item">
+            <strong>Includes:</strong>
+            <ul style="margin:8px 0;padding-left:18px;color:var(--muted);font-size:13px">
+              <li>Social Media Management</li>
+              <li>Google & Meta Ads</li>
+              <li>Content Strategy</li>
+              <li>Performance Reports</li>
+            </ul>
+          </div>
+          <div class="service-item btn-group" style="background:none;padding:0;box-shadow:none;border:none">
+            <a class="btn btn-primary" href="digital-marketing.html">Learn More</a>
+            <a class="btn btn-outline" href="digital-marketing.html#booking">Book Service</a>
+          </div>
+        </article>
+
+        <article class="service-item">
+          <h3>✍️ Handwriting Analysis</h3>
+          <p>Professional handwriting analysis (graphology) to discover your personality traits, strengths, career guidance, and personal insights from detailed handwriting assessment.</p>
+          <div class="service-item">
+            <strong>Includes:</strong>
+            <ul style="margin:8px 0;padding-left:18px;color:var(--muted);font-size:13px">
+              <li>Personality Analysis</li>
+              <li>Career Guidance</li>
+              <li>Detailed Report</li>
+              <li>Recommendations</li>
+            </ul>
+          </div>
+          <div class="service-item btn-group" style="background:none;padding:0;box-shadow:none;border:none">
+            <a class="btn btn-primary" href="handwriting-analysis.html">Learn More</a>
+            <a class="btn btn-outline" href="handwriting-analysis.html#booking">Book Service</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="about" class="container" aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
       <div class="two-col">
         <div>
-          <p>I’m <strong>Abanoub Wasafi</strong> — a motivated junior digital marketer with a <strong>Diploma in Digital Marketing</strong> from the Arab Academy for Science, Technology & Maritime Transport.</p>
-          <p>I’ve managed social media for a Limousine Services page and a Graphology (handwriting analysis) page — creating content calendars, producing educational and promotional posts, engaging with audiences, and supporting brand growth across social channels.</p>
+          <p>I'm <strong>Abanoub Wasafi</strong> — a motivated junior digital marketer with a <strong>Diploma in Digital Marketing</strong> from the Arab Academy for Science, Technology & Maritime Transport. I combine marketing theory with hands-on campaign execution.</p>
+          <p>I've managed social media for a Limousine Services page and a Graphology (handwriting analysis) page — creating content calendars, producing educational and promotional posts, engaging communities, and optimizing for growth. I use data to inform decisions and AI to accelerate delivery.</p>
           <div style="margin-top:12px" class="chips" aria-hidden="false">
             <div class="chip">Diploma in Digital Marketing — Arab Academy</div>
             <div class="chip">Seeking internship / junior roles</div>
@@ -138,7 +193,7 @@
           <h4 style="margin-top:0">Quick Facts</h4>
           <p class="small" style="margin:6px 0"><strong>Email:</strong> abanoubwasfii@gmail.com</p>
           <p class="small" style="margin:6px 0"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abanoub-wasfii" target="_blank" rel="noopener">linkedin.com/in/abanoub-wasfii</a></p>
-          <p class="small" style="margin:6px 0"><strong>WhatsApp:</strong> <a href="https://wa.me/201281666438" target="_blank" rel="noopener">+20 12816664384</a></p>
+          <p class="small" style="margin:6px 0"><strong>WhatsApp:</strong> <a href="https://wa.me/201281666438" target="_blank" rel="noopener">+20 128 166 6438</a></p>
         </aside>
       </div>
     </section>
@@ -191,14 +246,14 @@
       <div class="experience">
         <div class="exp-card" aria-labelledby="lim-head">
           <h3 id="lim-head" style="margin:0 0 6px">Limousine Services — Social Media Manager</h3>
-          <p class="small" style="margin:6px 0"><strong>Responsibilities:</strong> Content planning & scheduling, audience engagement, page management, content creation & copywriting, branding improvements.</p>
-          <p class="small" style="margin:6px 0"><strong>Achievements:</strong> Developed content for travelers & business customers, improved page consistency & engagement, created marketing-focused posts that supported service inquiries.</p>
+          <p class="small" style="margin:6px 0"><strong>Responsibilities:</strong> Content planning & scheduling, audience engagement, page management, content creation & copywriting, branding improvement.</p>
+          <p class="small" style="margin:6px 0"><strong>Achievements:</strong> Developed content for travelers & business customers, improved page consistency & engagement, created marketing-focused content, managed community interactions.</p>
         </div>
 
         <div class="exp-card" aria-labelledby="graph-head">
           <h3 id="graph-head" style="margin:0 0 6px">Graphology (Handwriting Analysis) — Social Media Manager</h3>
           <p class="small" style="margin:6px 0"><strong>Responsibilities:</strong> Social content planning, educational content creation, audience interaction, personal branding support.</p>
-          <p class="small" style="margin:6px 0"><strong>Achievements:</strong> Produced informative posts on handwriting analysis, increased engagement, and built a consistent content strategy around educational value.</p>
+          <p class="small" style="margin:6px 0"><strong>Achievements:</strong> Produced informative posts on handwriting analysis, increased engagement, and built a consistent content strategy around the service.</p>
         </div>
       </div>
     </section>
@@ -306,8 +361,8 @@
     </section>
 
     <section id="contact" class="container">
-      <h2>Let’s Connect</h2>
-      <p class="small">I’m actively looking for internship or junior opportunities. I reply quickly and can share full case study decks or a resume on request.</p>
+      <h2>Let's Connect</h2>
+      <p class="small">I'm actively looking for internship or junior opportunities. I reply quickly and can share full case study decks or a resume on request.</p>
 
       <div class="contact-grid" style="margin-top:16px">
         <form id="contactForm" onsubmit="return submitForm(event)">
@@ -334,7 +389,7 @@
           <h4 style="margin-top:0">Contact</h4>
           <p class="small" style="margin:6px 0"><strong>Email:</strong> <a href="mailto:abanoubwasfii@gmail.com">abanoubwasfii@gmail.com</a></p>
           <p class="small" style="margin:6px 0"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abanoub-wasfii" target="_blank" rel="noopener">linkedin.com/in/abanoub-wasfii</a></p>
-          <p class="small" style="margin:6px 0"><strong>WhatsApp:</strong> <a href="https://wa.me/201281666438" target="_blank" rel="noopener">+20 12816664384</a></p>
+          <p class="small" style="margin:6px 0"><strong>WhatsApp:</strong> <a href="https://wa.me/201281666438" target="_blank" rel="noopener">+20 128 166 6438</a></p>
         </aside>
       </div>
     </section>
@@ -344,7 +399,7 @@
     <div style="padding:20px 0">
       <div style="max-width:var(--maxw);margin:0 auto;padding:0 20px">
         <p style="margin:0 0 8px">© <span id="year"></span> Abanoub Wasafi — Junior Digital Marketer</p>
-        <p class="small" style="margin:0">Open to internships and junior roles • <a href="https://www.linkedin.com/in/abanoub-wasfii" target="_blank" rel="noopener">LinkedIn</a> • <a href="mailto:abanoubwasfii@gmail.com">Email</a></p>
+        <p class="small" style="margin:0">Open to internships and junior roles • <a href="https://www.linkedin.com/in/abanoub-wasfii" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://wa.me/201281666438" target="_blank" rel="noopener">WhatsApp</a></p>
       </div>
     </div>
   </footer>
